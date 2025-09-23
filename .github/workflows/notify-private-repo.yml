@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Notify private repository
         run: |
-          curl -X POST \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: Bearer ${{ secrets.CEV }}" \
-            https://api.github.com/repos/${{ secrets.OWN }}/AUTOMATITION_CERT/dispatches \
-            -d "{\"event_type\":\"public-repo-updated\",\"client_payload\":{\"repository\":\"${{ github.repository }}\",\"ref\":\"${{ github.ref }}\",\"sha\":\"${{ github.sha }}\"}}"
+            curl -i -X POST \
+              -H "Accept: application/vnd.github.v3+json" \
+              -H "Authorization: Bearer ${{ secrets.CEV }}" \
+              https://api.github.com/repos/${{ secrets.OWN }}/AUTOMATITION_CERT/dispatches \
+              -d '{"event_type":"public-repo-updated"}'
