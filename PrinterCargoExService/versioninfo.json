@@ -1,40 +1,40 @@
 {
-  "StringFileInfo": {
-    "FileDescription": "Printer CargoEx Service",
-    "CompanyName": "CargoEx",
-    "Comments": "CargoEx Printer Service",
-    "ProductVersion": "1.0.82",
-    "InternalName": "printer-cargoex-service",
-    "FileVersion": "1.0.82",
-    "LegalCopyright": "© CargoEx. All rights reserved.",
-    "OriginalFilename": "cargoex-printer.exe",
-    "ProductName": "Printer CargoEx Service"
-  },
   "IconPath": "resource.ico",
-  "ManifestPath": "app.manifest",
   "VarFileInfo": {
     "Translation": {
       "LangID": "0409",
       "CharsetID": "04B0"
     }
   },
+  "ManifestPath": "app.manifest",
+  "StringFileInfo": {
+    "CompanyName": "CargoEx",
+    "Comments": "CargoEx Printer Service",
+    "FileDescription": "Printer CargoEx Service",
+    "ProductName": "Printer CargoEx Service",
+    "ProductVersion": "1.0.83",
+    "InternalName": "printer-cargoex-service",
+    "OriginalFilename": "cargoex-printer.exe",
+    "FileVersion": "1.0.83",
+    "LegalCopyright": "© CargoEx. All rights reserved."
+  },
   "FixedFileInfo": {
-    "ProductVersion": {
-      "Patch": 82,
-      "Major": 1,
-      "Build": 0,
-      "Minor": 0
-    },
-    "FileFlagsMask": "3f",
     "FileOS": "040004",
-    "FileFlags": "00",
+    "FileFlagsMask": "3f",
     "FileSubType": "00",
     "FileVersion": {
-      "Patch": 82,
-      "Major": 1,
+      "Minor": 0,
       "Build": 0,
-      "Minor": 0
+      "Major": 1,
+      "Patch": 83
     },
-    "FileType": "01"
+    "FileFlags": "00",
+    "FileType": "01",
+    "ProductVersion": {
+      "Minor": 0,
+      "Build": 0,
+      "Major": 1,
+      "Patch": 83
+    }
   }
 }
