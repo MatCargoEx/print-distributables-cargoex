@@ -2,7 +2,7 @@ name: Upload EXE to Google Cloud Storage
 
 on:
   workflow_run:
-    workflows: ["sign"] 
+    workflows: ["Code Signing with Certum"] 
     types:
       - completed
 
