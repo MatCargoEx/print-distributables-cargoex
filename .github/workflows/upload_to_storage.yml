@@ -1,0 +1,28 @@
+name: Upload EXE to Google Cloud Storage
+
+on:
+  push:
+    paths:
+      - "_dist/*.exe"
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Google Cloud auth
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.CRD }}
+
+      - name: Install gcloud
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ secrets.PJ_ID }}
+
+      - name: Upload EXE to GCS
+        run: |
+          gsutil cp _dist/*.exe gs://cargoex-almacenamiento/Utilitarios/Impresion/
