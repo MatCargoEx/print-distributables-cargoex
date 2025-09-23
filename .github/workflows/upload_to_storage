@@ -2,8 +2,9 @@ name: Hello World on _dist changes
 
 on:
   push:
-    paths:
-      - "_dist/**"
+    branches:
+      - main
+
 
 jobs:
   hello:
