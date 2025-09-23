@@ -1,22 +1,19 @@
 name: Upload EXE to Google Cloud Storage
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '_dist/**'
+  workflow_run:
+    workflows: ["sign"] 
+    types:
+      - completed
 
 jobs:
   upload:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Clonar repo
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # 2. Autenticación con GCP usando el JSON de cuenta de servicio
       - name: Set up Google Cloud auth
         uses: google-github-actions/auth@v2
         with:
@@ -27,7 +24,6 @@ jobs:
         with:
           project_id: ${{ secrets.PJ_ID }}
 
-      # 3. Subir ejecutables al bucket
       - name: Upload EXE to GCS
         run: |
           gsutil cp _dist/*.exe gs://cargoex-almacenamiento/Utilitarios/Impresion/
