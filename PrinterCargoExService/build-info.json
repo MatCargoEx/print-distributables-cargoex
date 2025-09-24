@@ -1,6 +1,6 @@
 {
-  "version": "1.0.88",
-  "commitHash": "300b109e7ee6b21ded29bef2b106524d0659193c",
-  "branch": "main",
-  "builtAt": "2025-09-24T12:48:00Z"
+  "app_name": "CargoEx Printer",
+  "commit_id": "f734d0305be0ce387e0596a283b34a565bc23db7",
+  "build_date": "2025-09-24T13:52:05Z",
+  "version": "1.0.89"
 }
