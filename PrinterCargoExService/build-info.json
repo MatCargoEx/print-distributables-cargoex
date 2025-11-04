@@ -1,6 +1,6 @@
 {
-  "build_date": "2025-11-04T14:19:20Z",
-  "commit_id": "6f4c715a4927904e79f73ab5f00f7982ec3ddafc",
+  "app_name": "CargoEx Printer",
+  "build_date": "2025-11-04T14:40:09Z",
   "version": "1.0.103",
-  "app_name": "CargoEx Printer"
+  "commit_id": "6f4c715a4927904e79f73ab5f00f7982ec3ddafc"
 }
