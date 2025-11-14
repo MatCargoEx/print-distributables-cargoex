@@ -1,9 +1,11 @@
-# .github/workflows/notify-private-repo.yml
 name: Notify Private Repo on Push
+
 on:
   push:
     branches: [main]
-    paths: ['PrinterCargoExService/**']
+    paths:
+      - 'PrinterCargoExService/**'
+      - 'LabelDesigner/LabelDesigner.exe'
 
 jobs:
   notify:
@@ -11,8 +13,8 @@ jobs:
     steps:
       - name: Notify private repository
         run: |
-            curl -i -X POST \
-              -H "Accept: application/vnd.github.v3+json" \
-              -H "Authorization: Bearer ${{ secrets.CEV }}" \
-              https://api.github.com/repos/${{ secrets.OWN }}/AUTOMATITION_CERT/dispatches \
-              -d '{"event_type":"public-repo-updated"}'
+          curl -i -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: Bearer ${{ secrets.CEV }}" \
+            https://api.github.com/repos/${{ secrets.OWN }}/AUTOMATITION_CERT/dispatches \
+            -d '{"event_type":"public-repo-updated"}'
