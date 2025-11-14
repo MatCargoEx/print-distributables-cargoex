@@ -1,6 +1,6 @@
 {
-  "branch": "main",
-  "builtAt": "2025-11-14T14:25:00Z",
-  "commitHash": "38bda2f4fa0f86f8a223dd4dd1f0f60fa78b327b",
-  "version": "1.0.68"
+  "builtAt": "2025-11-14T14:34:13Z",
+  "version": "1.0.69",
+  "commitHash": "cd3015145b1f8bd2106f6033c8c2ec2e3d45f1d1",
+  "branch": "main"
 }
