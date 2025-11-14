@@ -36,7 +36,8 @@ jobs:
       - name: Notify private repository
         run: |
           curl -i -X POST \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: Bearer ${{ secrets.CEV }}" \
-            https://api.github.com/repos/${{ secrets.OWN }}/AUTOMATITION_CERT/dispatches \
-            -d "{\"event_type\":\"public-repo-updated\",\"client_payload\":{\"trigger\":\"${{ steps.detect.outputs.trigger }}\"}}"
+             -H "Authorization: Bearer ${{ secrets.CEV }}" \
+             -H "Accept: application/vnd.github.v3+json" \
+             https://api.github.com/repos/TU_USUARIO/certum-script/dispatches \
+             -d "{\"event_type\":\"public-repo-updated\",\"client_payload\":{\"trigger\":\"$TRIGGER\",\"repository\":\"${{ github.repository }}\",\"ref\":\"${{ github.ref }}\",\"sha\":\"${{ github.sha
+            }}\"}}"
